@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Users Page</title>
+    <title>Munu Punu - proposal</title>
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
     <!-- or if you need to add cache-busting -->
     <link th:href="@{/css/bootstrap.css(v=${@environment.getProperty('app.version')})}" rel="style" />
@@ -28,7 +28,8 @@
 </head>
 <body>
 <div class="proposal-box">
-    <h1 class="mb-4">Will You Marry Me?</h1>
+    <img th:src="@{/image/proposal.jpg}" style="max-width: 85%;"/>
+    <h1 class="mb-4">Munu Punu! Will You Marry Me?</h1>
     <button class="btn btn-success btn-lg"  id="button_yes">Yes</button>
     <button class="btn btn-danger btn-lg no-btn" id="noBtn">No</button>
 </div>
