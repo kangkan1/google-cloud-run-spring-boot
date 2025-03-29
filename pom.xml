@@ -40,6 +40,7 @@ limitations under the License.
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
     </dependencies>
   </dependencyManagement>
 
@@ -52,6 +53,11 @@ limitations under the License.
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-gcp-starter-logging</artifactId>
       <version>1.2.8.RELEASE</version>
+
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
 
     <!-- Provides access the metadata server -->

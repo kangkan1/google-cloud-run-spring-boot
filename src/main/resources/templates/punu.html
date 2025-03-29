@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users Page</title>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <!-- or if you need to add cache-busting -->
+    <link th:href="@{/css/bootstrap.css(v=${@environment.getProperty('app.version')})}" rel="style" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .proposal-box {
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .no-btn {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="proposal-box">
+    <h1 class="mb-4">Will You Marry Me?</h1>
+    <button class="btn btn-success btn-lg"  id="button_yes">Yes</button>
+    <button class="btn btn-danger btn-lg no-btn" id="noBtn">No</button>
+</div>
+
+<script>
+    document.getElementById('noBtn').addEventListener('mouseover', function() {
+        let x = Math.random() * (window.innerWidth - 100);
+        let y = Math.random() * (window.innerHeight - 50);
+        this.style.left = x + 'px';
+        this.style.top = y + 'px';
+    });
+    let btn_yes = document.getElementById('button_yes')
+    btn_yes.addEventListener('click', function(){
+        alert("I knew you would say Yes! 🎉💍")
+    })
+
+</script>
+</body>
+</html>
